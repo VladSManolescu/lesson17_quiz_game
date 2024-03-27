@@ -1,7 +1,7 @@
 import json
 
 
-def add_user(player_id: str,all_players: dict, path: str = "users.json") -> dict:
+def add_user(player_id: str, all_players: dict, path: str = "users.json") -> dict:
 
     full_name = input("Introdu numele tau (optional): ")
     full_name = player_id if full_name == "" or not full_name.isalnum() else full_name
@@ -24,6 +24,7 @@ def add_user(player_id: str,all_players: dict, path: str = "users.json") -> dict
         f.write(json.dumps(all_players, indent=4))
 
     return new_user
+
 
 def login(path: str = "users.json"):
     is_new_user = False
